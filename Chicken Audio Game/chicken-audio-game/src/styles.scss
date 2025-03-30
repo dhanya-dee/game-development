@@ -3,36 +3,65 @@ html,body{
     padding: 0;
     margin: 0;
     height: 100%;
+    background-color: #fadada;
 }
 
 .container-fluid{
     padding: 0;
     margin: 0;
     margin: 50px auto;
-    height: 32rem;
+    height: 40rem;
     width: 70%;
+    background-color: white;
     border: 6px solid green;
 }
 
 /* Row of Platforms */
 
+/* Row 1: Player and movements */
 .first-chicken-platform{
-    position: relative;
     display: flex;
     height: 50%;
-    align-items: end;
-    text-align: center;
+    align-items: flex-end;
 }
+
+.chicken-player{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 8px;
+    border: 2px solid #00008B;
+    background-color: aliceblue;
+    // animation: playermove 3s;
+}
+
+.chicken-arm{
+    position: absolute;
+    bottom: 25%;
+    width: 10px;
+    margin-left: 5px;
+    height: 40px;
+    background-color: #00008B;
+    transition: height 3.5s ease-in-out;
+}
+
+.chicken-arm:hover{
+    width: 10px;
+    height: 270px;
+}
+
+/* Row 2: Player and movements */
 .second-platform-div{
     position: relative;
     display: flex;
-    height: 25%;
     align-items: end;
     text-align: center;
 }
 
 .platform-size{
-    background-color: burlywood;
+    background-color: rgb(191, 146, 87);
     height: 12rem;
 }
 
@@ -71,28 +100,27 @@ html,body{
 .third-waterbody-div{
     position: relative; /* Needed for absolute positioning of pseudo-elements */
     display: flex;
-    align-items: end;
-    height: 35%;
+    height: 44.75%;
 }
 
-.waterbody1{
-    width: 50px;
-    height: inherit;
-    border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-    background-color: #00008B;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    border-bottom: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 99%; /* Optional: For a more rounded wave */
-    animation: wave 2s linear infinite; 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+// .waterbody1{
+//     width: 50px;
+//     height: inherit;
+//     border-left: 25px solid transparent;
+// 	border-right: 25px solid transparent;
+//     background-color: #00008B;
+//     border-top-left-radius: 100px;
+//     border-top-right-radius: 100px;
+//     border-bottom: 0;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     border-radius: 99%; /* Optional: For a more rounded wave */
+//     animation: wave 2s linear infinite; 
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+// }
 
 .waterbody2{
     width: 100%;
@@ -100,6 +128,10 @@ html,body{
     background-color: #00008B; /* Dark Blue */
 }
 
+@keyframes playermove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
 
 
 /* Keyframe animation for the wave */
@@ -109,10 +141,8 @@ html,body{
     }
     50% {
         transform: translate(-14%, -20%);
-
     }
     100% {
         transform: translate(-12%, -30%);
-
     }
   }

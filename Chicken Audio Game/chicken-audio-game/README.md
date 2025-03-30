@@ -1,6 +1,14 @@
-# ChickenAudioGame
+# Welcome to the Games from Social media Filters Series:
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+Up first we have,
+# Game 1:Chicken-Audio-Game
+
+![alt text](image.png)
+Note: All images belong to the Owner, only added for reference.
+
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4. and uses HTML,CSS for its implementation.
+
+We added Animations from CSS3 also!!!
 
 ## Development server
 
