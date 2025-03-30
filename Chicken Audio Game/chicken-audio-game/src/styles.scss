@@ -1,0 +1,118 @@
+/* You can add global styles to this file, and also import other style files */
+html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    margin: 50px auto;
+    height: 32rem;
+    width: 70%;
+    border: 6px solid green;
+}
+
+/* Row of Platforms */
+
+.first-chicken-platform{
+    position: relative;
+    display: flex;
+    height: 50%;
+    align-items: end;
+    text-align: center;
+}
+.second-platform-div{
+    position: relative;
+    display: flex;
+    height: 25%;
+    align-items: end;
+    text-align: center;
+}
+
+.platform-size{
+    background-color: burlywood;
+    height: 12rem;
+}
+
+.platform1{
+    width: 20%;
+    margin-right: 110px;
+}
+
+.platform2{
+    width: 12%;
+    margin-right: 70px;
+}
+
+.platform3{
+    width: 8%;
+    margin-right: 30px;
+}
+
+
+.platform4{
+    width: 12%;
+    margin-right: 50;
+}
+
+.platform5{
+    width: 8%;
+    margin-right: 40px;
+}
+
+.platform6{
+    width: 6%;
+    margin-right: 35px;
+}
+
+/* Row for waterbodies */
+.third-waterbody-div{
+    position: relative; /* Needed for absolute positioning of pseudo-elements */
+    display: flex;
+    align-items: end;
+    height: 35%;
+}
+
+.waterbody1{
+    width: 50px;
+    height: inherit;
+    border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+    background-color: #00008B;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 99%; /* Optional: For a more rounded wave */
+    animation: wave 2s linear infinite; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.waterbody2{
+    width: 100%;
+    height: inherit;
+    background-color: #00008B; /* Dark Blue */
+}
+
+
+
+/* Keyframe animation for the wave */
+@keyframes wave {
+    0% {
+      transform: translate(-4%, -10%);
+    }
+    50% {
+        transform: translate(-14%, -20%);
+
+    }
+    100% {
+        transform: translate(-12%, -30%);
+
+    }
+  }
